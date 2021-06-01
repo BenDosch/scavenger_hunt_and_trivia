@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1059782078703",
+    "firebase_url": "https://scavenger-hunt-and-trivia-default-rtdb.firebaseio.com",
+    "project_id": "scavenger-hunt-and-trivia",
+    "storage_bucket": "scavenger-hunt-and-trivia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1059782078703:android:3ab4b456ff2850a02d6b1a",
+        "android_client_info": {
+          "package_name": "org.brokenarrowmuseum.scavenger_hunt_and_trivia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1059782078703-27f8bqtk9c7g0ki98ro3ukd6psddf28f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEnQxFm-YQvGxARGRcdqw76I6DOZfnKrU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1059782078703-27f8bqtk9c7g0ki98ro3ukd6psddf28f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
