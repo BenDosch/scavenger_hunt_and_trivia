@@ -1,10 +1,14 @@
-package org.brokenarrowmuseum.scavenger_hunt_and_trivia
+package org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.entities
 
 import com.google.firebase.database.IgnoreExtraProperties
 
+/**
+ * Class representing questions for the scavenger hunt and trivia.
+ */
+
 @IgnoreExtraProperties
 data class Question(
-    val id : String = "",
+    val id: String = "",
     var format: String = "",
     var prompt: String = "",
     var answers: MutableList<String> = mutableListOf(),
