@@ -14,8 +14,8 @@ import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.entities.Question
 
 class QuestionDatabase {
     // Set up a connection to the Firebase database and get a reference to the questions document.
-    private val database: FirebaseDatabase = FirebaseDatabase.getInstance("https://scavenger-hunt-and-trivia-default-rtdb.firebaseio.com/")
-    private val myRef = database.getReference("message")
+    private val database: FirebaseDatabase = FirebaseDatabase.getInstance()
+    private val myRef = database.getReference("Questions")
 
     /**
      * Part of the learning process, not meant for final application
@@ -78,7 +78,7 @@ class QuestionDatabase {
      */
 
     fun getQuestion(id: String): Question? {
-        var question = Question()
+        val question = Question()
         try {
 
         } catch (e: Exception) {
