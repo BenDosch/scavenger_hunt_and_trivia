@@ -8,7 +8,7 @@ import com.google.firebase.database.IgnoreExtraProperties
 
 @IgnoreExtraProperties
 data class Question(
-    val id: String = "",
+    val id: Int = 0,
     var format: String = "",
     var prompt: String = "",
     var answers: MutableList<String> = mutableListOf(),
