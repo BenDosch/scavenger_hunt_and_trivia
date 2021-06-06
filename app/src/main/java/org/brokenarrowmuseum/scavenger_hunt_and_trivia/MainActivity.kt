@@ -2,11 +2,12 @@ package org.brokenarrowmuseum.scavenger_hunt_and_trivia
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.entities.Question
-import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.storage.Database
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.storage.QuestionsViewModel
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +19,5 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Admin::class.java)
             startActivity(intent)
         }
-
     }
 }
