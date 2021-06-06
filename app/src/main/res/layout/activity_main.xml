@@ -26,6 +26,7 @@
         app:srcCompat="@drawable/themuseumlogo" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="309dp"
         android:layout_height="246dp"
         android:layout_marginStart="1dp"
@@ -42,4 +43,5 @@
         app:layout_constraintVertical_bias="0.162"
         tools:itemCount="1"
         tools:listitem="@layout/recycler_view_item" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
