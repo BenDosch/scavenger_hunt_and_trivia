@@ -59,13 +59,14 @@ class Database {
     }
 
     /**
-     * Function that returns a singe question from the database based on id
+     * Function that returns a single question from the database based on id
      * @id: <String> id of the question you wish to get.
      * Return: Question object on success, null on failure.
      */
 
     fun getQuestion(id: String): Question? {
-        if (id == 0) { return null}
+        /**if (id == 0) { return null}*/
+        id?.equals(0) ?: (id == null)
         return Question()
     }
 
