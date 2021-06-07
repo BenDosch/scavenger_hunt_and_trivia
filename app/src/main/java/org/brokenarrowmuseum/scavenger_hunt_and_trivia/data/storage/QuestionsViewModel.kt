@@ -14,7 +14,8 @@ import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.entities.Question
  * Class to create a connection to the database containing questions and to access and manipulate the data
  */
 
-class QuestionsViewModel : ViewModel() {
+class
+QuestionsViewModel : ViewModel() {
     // Set up a connection to the Firebase database and get a reference to the questions document.
     private val qDatabase = FirebaseDatabase.getInstance().getReference("Questions")
 
@@ -63,22 +64,8 @@ class QuestionsViewModel : ViewModel() {
         return 1
     }
 
-    /**
-     * Function that returns a singe question from the database based on id
-     * @id: <String> id of the question you wish to get.
-     * Return: Question object on success, null on failure.
-     */
 
-    fun getQuestion(id: String): Question? {
-    return Question()
-    }
-
-    /**
-     * Function that returns a list of all questions from the database
-     * Return: List of Question objects from the database on success, empty list on failure.
-     */
-
-    fun getAll() {
+    fun fetchQuestions() {
         qDatabase.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val questions = mutableListOf<Question>()

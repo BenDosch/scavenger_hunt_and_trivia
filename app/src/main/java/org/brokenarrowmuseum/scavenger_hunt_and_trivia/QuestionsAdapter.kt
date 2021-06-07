@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.entities.Question
 
-class questionsAdapter : RecyclerView.Adapter<questionsAdapter.questionViewModel>() {
+class QuestionsAdapter : RecyclerView.Adapter<QuestionsAdapter.questionViewModel>() {
 
     private var questions = mutableListOf<Question>()
 
@@ -19,37 +19,24 @@ class questionsAdapter : RecyclerView.Adapter<questionsAdapter.questionViewModel
 
     override fun getItemCount() = questions.size
 
-    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: questionViewModel, position: Int) {
-        holder.view.text_view_name.text = questions[position].name
-        holder.view.text_view_city_votes.text =
-            "${questions[position].city} | Votes : ${questions[position].votes}"
-        holder.view.button_edit.setOnClickListener {
-            listener?.onRecyclerViewItemClicked(it, questions[position])
-        }
-        holder.view.button_delete.setOnClickListener {
-            listener?.onRecyclerViewItemClicked(it, questions[position])
-        }
+        holder.view.textView1.text = questions[position].prompt
     }
 
-    fun setquestions(questions: List<question>) {
-        this.questions = questions as MutableList<question>
+    fun setQuestions(questions: List<Question>) {
+        this.questions = questions as MutableList<Question>
         notifyDataSetChanged()
     }
 
-    fun addquestion(question: question) {
+    fun addQuestion(question: Question) {
         if (!questions.contains(question)) {
             questions.add(question)
         } else {
             val index = questions.indexOf(question)
-            if (question.isDeleted) {
-                questions.removeAt(index)
-            } else {
-                questions[index] = question
-            }
         }
         notifyDataSetChanged()
     }
 
     class questionViewModel(val view: View) : RecyclerView.ViewHolder(view)
+
 }

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".ui.AuthorsFragment">
+    tools:context="QutionsFragment">
 
     <TextView
         android:layout_width="match_parent"
@@ -13,17 +13,18 @@
         android:fontFamily="sans-serif-medium"
         android:text="Add New Trivia Question"
         android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
         android:textColor="@android:color/black"
         android:textSize="24sp" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/input_layout_name"
+        android:id="@+id/ilPrompt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edit_text_name"
+            android:id="@+id/etPrompt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Prompt" />
@@ -31,13 +32,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/input_layout_name"
+        android:id="@+id/ilCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edit_text_name"
+            android:id="@+id/etCategory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Category" />
@@ -45,11 +46,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button_add"
+        android:id="@+id/btnAddTriviaQuestion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purple_700"
-        android:text="Add Question"
+        android:text="Add Trivia Question"
         android:textColor="@android:color/white" />
 
 </LinearLayout>
