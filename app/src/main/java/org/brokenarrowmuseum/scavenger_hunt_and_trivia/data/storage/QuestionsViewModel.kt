@@ -14,8 +14,7 @@ import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.entities.Question
  * Class to create a connection to the database containing questions and to access and manipulate the data
  */
 
-class
-QuestionsViewModel : ViewModel() {
+class QuestionsViewModel : ViewModel() {
     // Set up a connection to the Firebase database and get a reference to the questions document.
     private val qDatabase = FirebaseDatabase.getInstance().getReference("Questions")
 

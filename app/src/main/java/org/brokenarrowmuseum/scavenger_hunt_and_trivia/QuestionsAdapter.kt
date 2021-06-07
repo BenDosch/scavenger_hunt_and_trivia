@@ -1,25 +1,23 @@
 package org.brokenarrowmuseum.scavenger_hunt_and_trivia
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.entities.Question
 
-class QuestionsAdapter : RecyclerView.Adapter<QuestionsAdapter.questionViewModel>() {
+class QuestionsAdapter : RecyclerView.Adapter<QuestionsAdapter.QuestionViewModel>() {
 
     private var questions = mutableListOf<Question>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = questionViewModel(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = QuestionViewModel(
         LayoutInflater.from(parent.context)
             .inflate(R.layout.recycler_view_item, parent, false)
     )
 
     override fun getItemCount() = questions.size
 
-    override fun onBindViewHolder(holder: questionViewModel, position: Int) {
+    override fun onBindViewHolder(holder: QuestionViewModel, position: Int) {
         holder.view.textView1.text = questions[position].prompt
     }
 
@@ -37,6 +35,6 @@ class QuestionsAdapter : RecyclerView.Adapter<QuestionsAdapter.questionViewModel
         notifyDataSetChanged()
     }
 
-    class questionViewModel(val view: View) : RecyclerView.ViewHolder(view)
+    class QuestionViewModel(val view: View) : RecyclerView.ViewHolder(view)
 
 }
