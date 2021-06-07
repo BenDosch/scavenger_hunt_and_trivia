@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Scavenger Hunt and Trivia</string>
     <string name="themuseumbrokenarrow">TheMuseumBrokenArrow</string>
+    <string name="Add_Question">Add Question</string>
+    <string name="Delete_Question">Delete Question</string>
+    <string name="Edit_Question">Edit Question</string>
+    <string name="Question_Type">Pick a question type to add</string>
+    <string name="Scavenger_Hunt">Scavenger Hunt</string>
+    <string name="Trivia">Trivia</string>
 </resources>

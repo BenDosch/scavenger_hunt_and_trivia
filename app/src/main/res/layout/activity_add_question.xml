@@ -24,7 +24,8 @@
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="40dp"
-        android:text="Trivia"
+        android:text="@string/Trivia"
+        app:backgroundTint="#038056"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPickType" />
 
@@ -35,7 +36,8 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
-        android:text="Scavenger Hunt"
+        android:text="@string/Scavenger_Hunt"
+        app:backgroundTint="#DE9537"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPickType" />
 
@@ -44,16 +46,16 @@
         android:layout_width="287dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:background="@color/teal_700"
+        android:background="#FFFFFF"
+        android:gravity="center_horizontal"
         android:paddingTop="40dp"
-        android:text="Pick a question type to add"
+        android:text="@string/Question_Type"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="#333333"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        android:gravity="center_horizontal" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <androidx.recyclerview.widget.RecyclerView
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

@@ -19,8 +19,12 @@
 
     <ImageButton
         android:id="@+id/btnAddQuestion"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_width="68dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginLeft="172dp"
+        android:layout_marginEnd="171dp"
+        android:layout_marginRight="171dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
@@ -28,8 +32,9 @@
 
     <ImageButton
         android:id="@+id/bntDeleteQuestion"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_width="68dp"
+        android:layout_height="47dp"
+        android:contentDescription="Delete Question"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
@@ -37,9 +42,10 @@
 
     <ImageButton
         android:id="@+id/btnEditQuestion"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_width="68dp"
+        android:layout_height="54dp"
 
+        android:contentDescription="Edit Question"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
@@ -48,27 +54,32 @@
 
     <TextView
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="205dp"
-        android:layout_height="wrap_content"
+        android:layout_width="378dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
-        android:background="@color/purple_500"
+        android:layout_marginBottom="40dp"
+        android:background="#038056"
         android:ems="10"
         android:gravity="center"
-        android:text="Add Question"
+        android:text="@string/Add_Question"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/editTextTextPersonName2"
-        android:layout_width="205dp"
-        android:layout_height="wrap_content"
+        android:layout_width="378dp"
+        android:layout_height="54dp"
         android:layout_marginTop="40dp"
-        android:background="@color/purple_500"
+        android:background="#048056"
         android:ems="10"
         android:gravity="center"
-        android:text="Delete Question"
+        android:text="@string/Delete_Question"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,13 +87,13 @@
 
     <TextView
         android:id="@+id/editTextTextPersonName3"
-        android:layout_width="205dp"
+        android:layout_width="375dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:background="@color/purple_500"
+        android:background="#038056"
         android:ems="10"
         android:gravity="center"
-        android:text="Edit Question"
+        android:text="@string/Edit_Question"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

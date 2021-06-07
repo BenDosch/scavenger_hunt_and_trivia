@@ -3,12 +3,11 @@ package org.brokenarrowmuseum.scavenger_hunt_and_trivia
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.ValueEventListener
-import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.storage.QuestionsViewModel
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.entities.Question
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.storage.Database
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
