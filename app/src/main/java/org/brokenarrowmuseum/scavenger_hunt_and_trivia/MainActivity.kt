@@ -11,6 +11,32 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val triviaFragment = TriviaFragment()
+        val scavengerHuntFragment = ScavengerHuntFragment()
+
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fragmentContainerView, triviaFragment)
+                .commit()
+        }
+
+        val btnTriva = findViewById<Button>(R.id.btnTrivia)
+        btnTriva.setOnClickListener {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fragmentContainerView, triviaFragment)
+                addToBackStack()
+                commit()
+            }
+        }
+
+        val btnScavengerHunt = findViewById<Button>(R.id.btnScavengerHunt)
+        btnTriva.setOnClickListener {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fragmentContainerView, scavengerHuntFragment)
+                addToBackStack()
+                commit()
+            }
+        }
+
         val btnEdit = findViewById<Button>(R.id.btnEdit)
         btnEdit.setOnClickListener {
             val intent = Intent(this, Admin::class.java)

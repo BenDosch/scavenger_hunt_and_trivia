@@ -10,16 +10,18 @@ class QuestionsAdapter : RecyclerView.Adapter<QuestionsAdapter.QuestionViewModel
 
     private var questions = mutableListOf<Question>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = QuestionViewModel(
-        LayoutInflater.from(parent.context)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): QuestionViewModel {
+        val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.recycler_view_item, parent, false)
-    )
+        return QuestionViewModel(view)
+    }
 
     override fun getItemCount() = questions.size
 
     override fun onBindViewHolder(holder: QuestionViewModel, position: Int) {
         holder.view.textView1.text = questions[position].prompt
     }
+
 
     fun setQuestions(questions: List<Question>) {
         this.questions = questions as MutableList<Question>
