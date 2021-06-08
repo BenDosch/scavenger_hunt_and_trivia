@@ -18,10 +18,10 @@ class QuestionsAdapter : RecyclerView.Adapter<QuestionsAdapter.QuestionViewModel
 
     override fun getItemCount() = questions.size
 
-    override fun onBindViewHolder(holder: QuestionViewModel, position: Int) {
+    /*override fun onBindViewHolder(holder: QuestionViewModel, position: Int) {
         holder.view.textView1.text = questions[position].prompt
     }
-
+*/
 
     fun setQuestions(questions: List<Question>) {
         this.questions = questions as MutableList<Question>
@@ -38,5 +38,9 @@ class QuestionsAdapter : RecyclerView.Adapter<QuestionsAdapter.QuestionViewModel
     }
 
     class QuestionViewModel(val view: View) : RecyclerView.ViewHolder(view)
+
+    override fun onBindViewHolder(holder: QuestionViewModel, position: Int) {
+        TODO("Not yet implemented")
+    }
 
 }

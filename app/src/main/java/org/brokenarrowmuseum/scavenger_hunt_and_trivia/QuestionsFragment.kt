@@ -23,9 +23,9 @@ class QuestionsFragment : Fragment() {
     }
 
     fun onViewCreated(savedInstanceState: Bundle?) {
-        super.onViewCreated(savedInstanceState)
+        /*super.onViewCreated(savedInstanceState)*/
 
-        recycler_view_trivia.adapter = adapter
+        /*recycler_view_trivia.adapter = adapter*/
 
         viewModel.fetchQuestions()
 
@@ -33,4 +33,8 @@ class QuestionsFragment : Fragment() {
             adapter.setQuestions(it)
         })
     }
+}
+
+private fun Fragment.onViewCreated(savedInstanceState: Bundle?) {
+
 }

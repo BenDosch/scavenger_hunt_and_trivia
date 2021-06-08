@@ -5,13 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.flexbox.FlexDirection
 import com.google.android.flexbox.FlexboxLayoutManager
 import com.google.android.flexbox.JustifyContent
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.entities.Question
-import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.storage.Database
+/*import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.storage.Database*/
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,11 +24,11 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = layoutManager
 
         val divLikeContent = ArrayList<String>()
-        /*divLikeContent.add("Route")
+        divLikeContent.add("Route")
         divLikeContent.add("No calls during the ride")
         divLikeContent.add("Smell")
         divLikeContent.add("Less talk")
-        divLikeContent.add("Safety")*/
+        divLikeContent.add("Safety")
 
         val adapter = DivLikeAdapter(divLikeContent)
 

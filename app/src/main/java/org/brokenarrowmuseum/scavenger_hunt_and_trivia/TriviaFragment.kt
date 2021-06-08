@@ -14,9 +14,9 @@ class TriviaFragment : Fragment(R.layout.trivia_fragment) {
     private val adapter = QuestionsAdapter()
 
     fun onViewCreated(savedInstanceState: Bundle?) {
-        super.onViewCreated(savedInstanceState)
+        /*super.onViewCreated(savedInstanceState)*/
 
-        recycler_view_questions.adapter = adapter
+        /*recycler_view_questions.adapter = adapter*/
 
         viewModel.fetchQuestions()
 
