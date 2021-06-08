@@ -1,4 +1,4 @@
-package org.brokenarrowmuseum.scavenger_hunt_and_trivia
+package org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.R
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.adapters.QuestionsAdapter
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.storage.QuestionsViewModel
 
 
