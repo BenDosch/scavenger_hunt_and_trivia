@@ -7,4 +7,8 @@
     <string name="Question_Type">Pick a question type to add</string>
     <string name="Scavenger_Hunt">Scavenger Hunt</string>
     <string name="Trivia">Trivia</string>
+    <string name="Add_Trivia">Add New Trivia Question</string>
+    <string name="Prompt">Prompt</string>
+    <string name="Category">Category</string>
+    <string name="Add_Btn">Add New Trivia Question</string>
 </resources>
