@@ -11,4 +11,7 @@
     <string name="Prompt">Prompt</string>
     <string name="Category">Category</string>
     <string name="Add_Btn">Add New Trivia Question</string>
+    <string name="Admin">Edit</string>
+    <string name="Scavenger_Desc">Description</string>
+    <string name="Found">Found</string>
 </resources>
