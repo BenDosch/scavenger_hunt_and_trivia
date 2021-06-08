@@ -13,7 +13,7 @@ class QuestionsAdapter : RecyclerView.Adapter<QuestionsAdapter.QuestionViewModel
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): QuestionViewModel {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.recycler_view_item, parent, false)
+            .inflate(R.layout.trivia_item, parent, false)
         return QuestionViewModel(view)
     }
 

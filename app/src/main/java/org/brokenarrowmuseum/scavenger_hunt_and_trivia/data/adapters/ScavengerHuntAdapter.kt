@@ -9,38 +9,38 @@ import org.brokenarrowmuseum.scavenger_hunt_and_trivia.R
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.entities.Question
 
 
-class TriviaAdapter(
+class ScavengerHuntAdapter(
     private val questions: MutableList<Question>
-    ) : RecyclerView.Adapter<TriviaAdapter.TriviaViewHolder>() {
+    ) : RecyclerView.Adapter<ScavengerHuntAdapter.ScavengerHuntViewHolder>() {
 
     /**
      * Provide a reference to the type of views that you are using
      * (custom ViewHolder).
      */
-    class TriviaViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val tvPrompt: TextView
+    class ScavengerHuntViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val tvDescription: TextView
 
         init {
             // Define click listener for the ViewHolder's View.
-            tvPrompt = view.findViewById(R.id.tvPrompt)
+            tvDescription = view.findViewById(R.id.tvDescription)
         }
     }
 
     // Create new views (invoked by the layout manager)
-    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): TriviaViewHolder {
+    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ScavengerHuntViewHolder {
         // Create a new view, which defines the UI of the list item
         val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.trivia_item, viewGroup, false)
+            .inflate(R.layout.scavenger_hunt_item, viewGroup, false)
 
-        return TriviaViewHolder(view)
+        return ScavengerHuntViewHolder(view)
     }
 
     // Replace the contents of a view (invoked by the layout manager)
-    override fun onBindViewHolder(viewHolder: TriviaViewHolder, position: Int) {
+    override fun onBindViewHolder(viewHolder: ScavengerHuntViewHolder, position: Int) {
 
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
-        viewHolder.tvPrompt.text = questions[position].prompt
+        viewHolder.tvDescription.text = questions[position].prompt
     }
 
     // Return the size of your dataset (invoked by the layout manager)

@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".data.fragments.TriviaFragment">
+    tools:context=".data.fragments.ScavengerHuntFragment">
 
     <TextView
         android:id="@+id/tvTitle"
@@ -28,7 +28,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle"
-        tools:listitem="@layout/recycler_view_item"
+        tools:listitem="@layout/trivia_item"
         tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
