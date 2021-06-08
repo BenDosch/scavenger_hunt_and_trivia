@@ -19,6 +19,7 @@
       android:id="@+id/tvDescription"
       android:layout_width="0dp"
       android:layout_height="0dp"
+      android:fontFamily="@font/montserrat_regular"
       android:text="@string/Scavenger_Desc"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toStartOf="@+id/switch1"
