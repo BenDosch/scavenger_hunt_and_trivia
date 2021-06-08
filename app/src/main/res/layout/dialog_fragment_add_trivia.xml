@@ -49,7 +49,7 @@
         android:id="@+id/btnAddTriviaQuestion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/purple_700"
+        android:background="#FF038056"
         android:text="Add Trivia Question"
         android:textColor="@android:color/white" />
 
