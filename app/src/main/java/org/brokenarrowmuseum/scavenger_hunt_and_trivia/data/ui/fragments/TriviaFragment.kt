@@ -1,4 +1,4 @@
-package org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.fragments
+package org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -18,13 +18,13 @@ class TriviaFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.trivia_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_trivia, container, false)
     }
 
     override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
         super.onViewCreated(itemView, savedInstanceState)
 
-        var questionlist = mutableListOf<Question>(
+        val questionlist = mutableListOf<Question>(
             Question("1", "Open-ended", "Is this the real life?"),
             Question("2", "Open-ended", "Is this just fantasy?"),
             Question("3", "Open-ended", "Caught in a landslide"),

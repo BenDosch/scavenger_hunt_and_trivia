@@ -1,4 +1,4 @@
-package org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.fragments
+package org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -37,6 +37,3 @@ class QuestionsFragment : Fragment() {
     }
 }
 
-private fun Fragment.onViewCreated(savedInstanceState: Bundle?) {
-
-}

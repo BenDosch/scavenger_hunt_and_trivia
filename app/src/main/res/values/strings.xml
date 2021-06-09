@@ -7,4 +7,6 @@
     <string name="Question_Type">Pick a question type to add</string>
     <string name="Scavenger_Hunt">Scavenger Hunt</string>
     <string name="Trivia">Trivia</string>
+    <string name="Author_Addedd">Author sucessfully added</string>
+    <string name="Error">Error: %1$s</string>
 </resources>

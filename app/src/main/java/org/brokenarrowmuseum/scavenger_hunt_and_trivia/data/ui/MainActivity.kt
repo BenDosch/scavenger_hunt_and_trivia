@@ -1,11 +1,12 @@
-package org.brokenarrowmuseum.scavenger_hunt_and_trivia
+package org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.fragments.ScavengerHuntFragment
-import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.fragments.TriviaFragment
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.R
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.ui.fragments.ScavengerHuntFragment
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.ui.fragments.TriviaFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
 
         val btnEdit = findViewById<Button>(R.id.btnEdit)
         btnEdit.setOnClickListener {
-            val intent = Intent(this, Admin::class.java)
+            val intent = Intent(this, AdminActivity::class.java)
             startActivity(intent)
         }
     }
