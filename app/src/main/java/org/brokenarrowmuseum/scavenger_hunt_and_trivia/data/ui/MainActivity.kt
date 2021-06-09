@@ -1,4 +1,4 @@
-package org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.ui
+package org.brokenarrowmuseum.scavenger_hunt_and_trivia
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         val triviaFragment = TriviaFragment()
         val scavengerHuntFragment = ScavengerHuntFragment()
+        val adminFragment = admin_login()
 
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.fragmentContainerView, triviaFragment)
@@ -41,8 +42,11 @@ class MainActivity : AppCompatActivity() {
 
         val btnEdit = findViewById<Button>(R.id.btnEdit)
         btnEdit.setOnClickListener {
-            val intent = Intent(this, AdminActivity::class.java)
-            startActivity(intent)
+            supportFragmentManager.beginTransaction().apply{
+                replace(R.id.fragmentContainerView, adminFragment)
+                addToBackStack(null)
+                commit()
+            }
         }
     }
 }

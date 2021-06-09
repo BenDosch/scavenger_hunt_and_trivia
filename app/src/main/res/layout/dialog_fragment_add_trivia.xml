@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -9,11 +10,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Add New Trivia Question"
-        android:textAlignment="center"
         android:layout_gravity="center_horizontal"
+        android:layout_margin="12dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/Add_Trivia"
+        android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="24sp" />
 
@@ -27,7 +28,8 @@
             android:id="@+id/etPrompt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Prompt" />
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="@string/Prompt" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -41,7 +43,8 @@
             android:id="@+id/etCategory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Category" />
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="@string/Category" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -49,8 +52,10 @@
         android:id="@+id/btnAddTriviaQuestion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/purple_700"
-        android:text="Add Trivia Question"
-        android:textColor="@android:color/white" />
+        android:background="#FF038056"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/Add_Btn"
+        android:textColor="@android:color/white"
+        app:backgroundTint="#038056" />
 
 </LinearLayout>
