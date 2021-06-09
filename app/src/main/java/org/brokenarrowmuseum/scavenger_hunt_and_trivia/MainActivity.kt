@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         val triviaFragment = TriviaFragment()
         val scavengerHuntFragment = ScavengerHuntFragment()
+        val adminFragment = admin_login()
 
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.fragmentContainerView, triviaFragment)
@@ -40,8 +41,11 @@ class MainActivity : AppCompatActivity() {
 
         val btnEdit = findViewById<Button>(R.id.btnEdit)
         btnEdit.setOnClickListener {
-            val intent = Intent(this, Admin::class.java)
-            startActivity(intent)
+            supportFragmentManager.beginTransaction().apply{
+                replace(R.id.fragmentContainerView, adminFragment)
+                addToBackStack(null)
+                commit()
+            }
         }
     }
 }
