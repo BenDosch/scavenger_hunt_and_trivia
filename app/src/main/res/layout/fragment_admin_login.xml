@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintGuide_begin="16dp" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
@@ -46,7 +46,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:fontFamily="@font/montserrat_regular"
         android:text="Submit"
+        app:backgroundTint="#038056"
         app:layout_constraintStart_toEndOf="@+id/editTextTextPassword"
         tools:layout_editor_absoluteY="392dp" />
 
