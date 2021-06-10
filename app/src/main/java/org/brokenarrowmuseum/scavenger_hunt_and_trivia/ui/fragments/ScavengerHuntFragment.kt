@@ -1,4 +1,4 @@
-package org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.ui.fragments
+package org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.R
-import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.adapters.ScavengerHuntAdapter
-import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.entities.Question
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.adapters.ScavengerHuntAdapter
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.Question
 
 class ScavengerHuntFragment : Fragment() {
 

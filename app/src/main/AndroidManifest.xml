@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ScavengerHuntAndTrivia">
-        <activity android:name=".data.ui.activities.AddQuestionActivity"></activity>
-        <activity android:name=".data.ui.activities.AdminActivity">
+        <activity android:name="org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.activities.AddQuestionActivity"></activity>
+        <activity android:name="org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.activities.AdminActivity">
         </activity>
-        <activity android:name=".data.ui.activities.MainActivity">
+        <activity android:name="org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,4 +1,4 @@
-package org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.ui.fragments
+package org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.R
-import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.adapters.QuestionsAdapter
-import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.storage.QuestionsViewModel
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.adapters.QuestionsAdapter
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.viewmodels.QuestionsViewModel
 
 
 class QuestionsFragment : Fragment() {
@@ -31,7 +31,7 @@ class QuestionsFragment : Fragment() {
 
         viewModel.fetchQuestions()
 
-        viewModel.authors.observe(viewLifecycleOwner, {
+        viewModel.questions.observe(viewLifecycleOwner, {
             adapter.setQuestions(it)
         })
     }

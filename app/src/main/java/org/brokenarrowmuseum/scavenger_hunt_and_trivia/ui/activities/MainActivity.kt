@@ -1,12 +1,12 @@
-package org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.ui.activities
+package org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.R
-import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.ui.fragments.ScavengerHuntFragment
-import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.ui.fragments.TriviaFragment
-import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.ui.fragments.AdminLoginFragment
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.fragments.ScavengerHuntFragment
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.fragments.TriviaFragment
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.fragments.AdminLoginFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

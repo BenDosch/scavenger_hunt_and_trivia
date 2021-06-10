@@ -1,4 +1,4 @@
-package org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.ui.fragments
+package org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,8 +11,8 @@ import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.R
-import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.entities.Question
-import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.storage.QuestionsViewModel
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.Question
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.viewmodels.QuestionsViewModel
 
 
 class AddTriviaDialogFragment : DialogFragment() {
@@ -32,7 +32,7 @@ class AddTriviaDialogFragment : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.result.observe(viewLifecycleOwner, Observer {
+        viewModel.result.observe(viewLifecycleOwner, {
             val message = if (it == null) {
                 getString(R.string.Author_Addedd)
             } else {

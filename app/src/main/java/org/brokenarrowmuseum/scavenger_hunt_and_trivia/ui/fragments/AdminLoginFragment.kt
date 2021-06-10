@@ -1,4 +1,4 @@
-package org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.ui.fragments
+package org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.R
-import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.ui.activities.AdminActivity
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.activities.AdminActivity
 
 
 class AdminLoginFragment : Fragment() {
