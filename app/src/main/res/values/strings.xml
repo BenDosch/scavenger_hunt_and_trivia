@@ -7,7 +7,7 @@
     <string name="Question_Type">Pick a question type to add</string>
     <string name="Scavenger_Hunt">Scavenger Hunt</string>
     <string name="Trivia">Trivia</string>
-    <string name="Author_Addedd">Author sucessfully added</string>
+    <string name="Author_Addedd">Author successfully added</string>
     <string name="Error">Error: %1$s</string>
     <string name="Add_Trivia">Add New Trivia Question</string>
     <string name="Prompt">Prompt</string>
@@ -17,4 +17,8 @@
     <string name="Scavenger_Desc">Description</string>
     <string name="Found">Found</string>
     <string name="Answer_Here">Answer Here</string>
+    <string name="Please_Enter_Password">Please Enter Password</string>
+    <string name="Password">Password</string>
+    <string name="Submit">Submit</string>
+    <string name="Museum_Logo">Museum Logo</string>
 </resources>

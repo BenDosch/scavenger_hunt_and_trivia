@@ -1,4 +1,4 @@
-package org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.ui
+package org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.ui.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

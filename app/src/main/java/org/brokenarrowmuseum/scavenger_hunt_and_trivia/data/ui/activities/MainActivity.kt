@@ -1,12 +1,12 @@
-package org.brokenarrowmuseum.scavenger_hunt_and_trivia
+package org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.ui.activities
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.R
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.ui.fragments.ScavengerHuntFragment
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.ui.fragments.TriviaFragment
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.ui.fragments.AdminLoginFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         val triviaFragment = TriviaFragment()
         val scavengerHuntFragment = ScavengerHuntFragment()
-        val adminFragment = admin_login()
+        val adminFragment = AdminLoginFragment()
 
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.fragmentContainerView, triviaFragment)

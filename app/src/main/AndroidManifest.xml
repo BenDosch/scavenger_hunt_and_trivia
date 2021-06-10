@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ScavengerHuntAndTrivia">
-        <activity android:name=".data.ui.AddQuestionActivity"></activity>
-        <activity android:name=".data.ui.AdminActivity">
+        <activity android:name=".data.ui.activities.AddQuestionActivity"></activity>
+        <activity android:name=".data.ui.activities.AdminActivity">
         </activity>
-        <activity android:name=".data.ui.MainActivity">
+        <activity android:name=".data.ui.activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
