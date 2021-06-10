@@ -10,8 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ScavengerHuntAndTrivia">
         <activity android:name=".AddQuestion"></activity>
-        <activity android:name=".Admin">
-        </activity>
+        <activity android:name=".Admin"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
