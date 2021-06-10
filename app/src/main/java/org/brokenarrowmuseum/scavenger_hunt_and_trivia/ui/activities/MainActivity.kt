@@ -16,16 +16,17 @@ class MainActivity : AppCompatActivity() {
         val triviaFragment = TriviaFragment()
         val scavengerHuntFragment = ScavengerHuntFragment()
         val adminFragment = AdminLoginFragment()
+        val fragmentContainerView = R.id.fcvMain
 
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fragmentContainerView, triviaFragment)
+            replace(fragmentContainerView, triviaFragment)
                 .commit()
         }
 
         val btnTriva = findViewById<Button>(R.id.btnTrivia)
         btnTriva.setOnClickListener {
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fragmentContainerView, triviaFragment)
+                replace(fragmentContainerView, triviaFragment)
                 addToBackStack(null)
                 commit()
             }
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         val btnScavengerHunt = findViewById<Button>(R.id.btnScavengerHunt)
         btnScavengerHunt.setOnClickListener {
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fragmentContainerView, scavengerHuntFragment)
+                replace(fragmentContainerView, scavengerHuntFragment)
                 addToBackStack(null)
                 commit()
             }
@@ -43,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         val btnEdit = findViewById<Button>(R.id.btnEdit)
         btnEdit.setOnClickListener {
             supportFragmentManager.beginTransaction().apply{
-                replace(R.id.fragmentContainerView, adminFragment)
+                replace(fragmentContainerView, adminFragment)
                 addToBackStack(null)
                 commit()
             }

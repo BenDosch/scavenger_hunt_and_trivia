@@ -21,4 +21,6 @@
     <string name="Password">Password</string>
     <string name="Submit">Submit</string>
     <string name="Museum_Logo">Museum Logo</string>
+    <string name="Admin_Instructions">Click on a question to edit or click the button to add a new question.</string>
+    <string name="Pick_A_Format">What type of question would you like to edit?</string>
 </resources>

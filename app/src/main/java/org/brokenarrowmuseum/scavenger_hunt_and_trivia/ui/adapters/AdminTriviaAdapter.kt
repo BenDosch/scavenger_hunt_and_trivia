@@ -9,7 +9,7 @@ import org.brokenarrowmuseum.scavenger_hunt_and_trivia.R
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.Question
 
 
-class TriviaAdapter() : RecyclerView.Adapter<TriviaAdapter.QuestionViewModel>() {
+class AdminTriviaAdapter() : RecyclerView.Adapter<AdminTriviaAdapter.QuestionViewModel>() {
 
     private var questions = mutableListOf<Question>()
 
@@ -22,7 +22,7 @@ class TriviaAdapter() : RecyclerView.Adapter<TriviaAdapter.QuestionViewModel>() 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): QuestionViewModel {
         // Create a new view, which defines the UI of the list item
         val view =LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.trivia_item, viewGroup, false)
+            .inflate(R.layout.admin_trivia_item, viewGroup, false)
         return QuestionViewModel(view)
     }
 

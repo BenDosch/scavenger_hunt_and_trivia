@@ -5,18 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.R
-import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.adapters.TriviaAdapter
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.adapters.AdminTriviaAdapter
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.viewmodels.QuestionsViewModel
 
-class TriviaFragment : Fragment() {
+class AdminTriviaFragment : Fragment() {
 
     private lateinit var viewModel : QuestionsViewModel
-    private val adapter = TriviaAdapter()
+    private val adapter = AdminTriviaAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

@@ -24,7 +24,7 @@
         app:srcCompat="@drawable/themuseumlogo" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
+        android:id="@+id/fcvMain"
         android:name="org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.fragments.TriviaFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
