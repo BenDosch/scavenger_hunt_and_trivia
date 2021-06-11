@@ -10,12 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ScavengerHuntAndTrivia">
         <activity android:name="org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.activities.TriviaAdminActivity"></activity>
-        <activity android:name="org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.activities.AdminActivity">
-        </activity>
+        <activity android:name="org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.activities.AdminActivity"></activity>
         <activity android:name="org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.activities.MainActivity">
-        <activity android:name=".AddQuestion"></activity>
-        <activity android:name=".Admin"></activity>
-        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
