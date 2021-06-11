@@ -7,8 +7,8 @@
     <string name="Question_Type">Pick a question type to add</string>
     <string name="Scavenger_Hunt">Scavenger Hunt</string>
     <string name="Trivia">Trivia</string>
-<!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Author_Addedd">Author successfully added</string>
+    <string name="Error">Error: %1$s</string>
     <string name="Add_Trivia">Add New Trivia Question</string>
     <string name="Prompt">Prompt</string>
     <string name="Category">Category</string>
@@ -17,4 +17,10 @@
     <string name="Scavenger_Desc">Description</string>
     <string name="Found">Found</string>
     <string name="Answer_Here">Answer Here</string>
+    <string name="Please_Enter_Password">Please Enter Password</string>
+    <string name="Password">Password</string>
+    <string name="Submit">Submit</string>
+    <string name="Museum_Logo">Museum Logo</string>
+    <string name="Admin_Instructions">Click on a question to edit or click the button to add a new question.</string>
+    <string name="Pick_A_Format">What type of question would you like to edit?</string>
 </resources>

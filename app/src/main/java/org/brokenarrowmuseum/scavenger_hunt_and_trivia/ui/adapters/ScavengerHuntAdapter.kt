@@ -1,4 +1,4 @@
-package org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.adapters
+package org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.R
-import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.entities.Question
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.Question
 
 
 class ScavengerHuntAdapter(

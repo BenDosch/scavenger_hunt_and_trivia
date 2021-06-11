@@ -1,4 +1,4 @@
-package org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.storage
+package org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -8,7 +8,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import java.lang.Exception
-import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.entities.Question
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.Question
 
 /**
  * Class to create a connection to the database containing questions and to access and manipulate the data
@@ -19,11 +19,11 @@ class QuestionsViewModel : ViewModel() {
     private val qDatabase = FirebaseDatabase.getInstance().getReference("Questions")
 
     private val _questions = MutableLiveData<List<Question>>()
-    val authors: LiveData<List<Question>>
+    val questions: LiveData<List<Question>>
         get() = _questions
 
     private val _question = MutableLiveData<Question>()
-    val author: LiveData<Question>
+    val question: LiveData<Question>
         get() = _question
 
     private val _result = MutableLiveData<Exception?>()
@@ -31,9 +31,8 @@ class QuestionsViewModel : ViewModel() {
         get() = _result
 
     /**
-     * Function that adds a question object to the database
+     * Function that adds a question object to the database and reports the result
      * @question: <Question> question object to add to database
-     * Return: 1 on success, 0 on failure.
      */
 
     fun addQuestion(question: Question) {
@@ -65,26 +64,22 @@ class QuestionsViewModel : ViewModel() {
 
 
     fun fetchQuestions() {
-        qDatabase.addValueEventListener(object : ValueEventListener {
+        qDatabase.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                val questions = mutableListOf<Question>()
                 if (snapshot.exists()) {
-                    for (child in snapshot.children) {
-                        val question = child.getValue(Question::class.java)
-                        question?.id = child.key
-                        if (question != null) {
-                            questions.add(element = question)
-                        }
+                    val questions = mutableListOf<Question>()
+                    for (questionSnapshot in snapshot.children) {
+                        val question = questionSnapshot.getValue(Question::class.java)
+                        question?.id = questionSnapshot.key
+                        question?.let { questions.add(it) }
                     }
                     _questions.value = questions
                 }
             }
-
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
+            override fun onCancelled(error: DatabaseError) {}
         })
     }
+
 }
 
     /**

@@ -1,4 +1,4 @@
-package org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.entities
+package org.brokenarrowmuseum.scavenger_hunt_and_trivia.data
 
 import com.google.firebase.database.IgnoreExtraProperties
 

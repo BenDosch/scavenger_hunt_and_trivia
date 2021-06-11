@@ -5,14 +5,14 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".admin_login">
+    tools:context=".ui.activities.MainActivity">
 
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="268dp"
         android:layout_height="28dp"
-        android:text="Please Enter Password"
+        android:text="@string/Please_Enter_Password"
         android:textAllCaps="true"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
@@ -34,6 +34,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:ems="10"
+        android:autofillHints="@string/Password"
+        android:hint="@string/Password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.412"
@@ -41,7 +43,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -50,7 +52,7 @@
         android:layout_marginEnd="31dp"
         android:layout_marginRight="31dp"
         android:fontFamily="@font/montserrat_regular"
-        android:text="Submit"
+        android:text="@string/Submit"
         app:backgroundTint="#038056"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editTextTextPassword"

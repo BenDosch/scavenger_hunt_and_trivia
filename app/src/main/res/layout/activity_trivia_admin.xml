@@ -18,37 +18,35 @@
         app:srcCompat="@drawable/themuseumlogo" />
 
     <TextView
-        android:id="@+id/tvPickAFormat"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvInstructions"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:text="@string/Pick_A_Format"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:text="@string/Admin_Instructions"
+        app:layout_constraintEnd_toStartOf="@+id/imbtnAddQuestion"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <Button
-        android:id="@+id/btnScavengerHuntAdmin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="@string/Scavenger_Hunt"
+    <ImageButton
+        android:id="@+id/imbtnAddQuestion"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/Add_Question"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnTriviaAdmin"
-        app:layout_constraintTop_toBottomOf="@+id/tvPickAFormat" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
-    <Button
-        android:id="@+id/btnTriviaAdmin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="@string/Trivia"
-        app:layout_constraintEnd_toStartOf="@+id/btnScavengerHuntAdmin"
-        app:layout_constraintHorizontal_bias="0.5"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fcvAdmin"
+        android:name="org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.fragments.AdminTriviaFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPickAFormat" />
+        app:layout_constraintTop_toBottomOf="@+id/tvInstructions"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
