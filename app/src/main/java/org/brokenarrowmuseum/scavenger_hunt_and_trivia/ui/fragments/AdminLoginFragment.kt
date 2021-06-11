@@ -7,8 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.R
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.activities.AdminActivity
+import android.app.AlertDialog
+import android.content.DialogInterface
+
 
 
 class AdminLoginFragment : Fragment() {
@@ -24,8 +28,23 @@ class AdminLoginFragment : Fragment() {
         // Change activity when "Submit" button is clicked
         val submit = view.findViewById<Button>(R.id.btnSubmit)
         submit.setOnClickListener {
-            val intent = Intent(activity, AdminActivity::class.java)
-            startActivity(intent)
+            // Takes the entered password and compares it to value. If correct launches admin
+            // else it clears field and re-requests password
+            val entry = view.findViewById<EditText>(R.id.editTextTextPassword).text.toString()
+
+            if ( entry.compareTo(getString(R.string.parse_application_id)) == 0 ) {
+                val intent = Intent(activity, AdminActivity::class.java)
+                startActivity(intent)
+            } else {
+                view.findViewById<EditText>(R.id.editTextTextPassword).text.clear()
+                val dialogBuilder = AlertDialog.Builder(this.activity)
+                dialogBuilder.setMessage("Please re-enter your password")
+                val alert = dialogBuilder.create()
+                // set title for alert dialog box
+                alert.setTitle("Incorrect Password")
+                // show alert dialog
+                alert.show()
+            }
         }
     }
 }
