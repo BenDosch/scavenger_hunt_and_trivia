@@ -3,10 +3,7 @@ package org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.viewmodels
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.*
 import java.lang.Exception
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.Question
 
@@ -47,21 +44,55 @@ class QuestionsViewModel : ViewModel() {
             }
     }
 
-    /**
-     * Function that deletes a question object from the database
-     * @id: <String> id of the question to delete.
-     * Return: 1 on success, 0 on failure.
-     */
-
-    fun deleteQuestion(id: String): Int {
-        try {
-            qDatabase.child("Questions").child(id).setValue(null)
-        } catch (e: Exception) {
-            return 0
-        }
-        return 1
+    fun updateQuestion(question: Question) {
+        qDatabase.child(question.id!!).setValue(question)
+            .addOnCompleteListener {
+                if (it.isSuccessful) {
+                    _result.value = null
+                } else {
+                    _result.value = it.exception
+                }
+            }
     }
 
+    fun deleteQuestion(question: Question) {
+        qDatabase.child(question.id!!).setValue(null)
+            .addOnCompleteListener {
+                if (it.isSuccessful) {
+                    _result.value = null
+                } else {
+                    _result.value = it.exception
+                }
+            }
+    }
+
+    private val childEventListener = object : ChildEventListener {
+        override fun onChildAdded(snapshot: DataSnapshot, previousChildName: String?) {
+            val question = snapshot.getValue(Question::class.java)
+            question?.id = snapshot.key
+            _question.value = question!!
+        }
+        override fun onChildChanged(snapshot: DataSnapshot, previousChildName: String?) {
+            val question = snapshot.getValue(Question::class.java)
+            question?.id = snapshot.key
+            _question.value = question!!
+        }
+
+        override fun onChildRemoved(snapshot: DataSnapshot) {
+            val question = snapshot.getValue(Question::class.java)
+            question?.id = snapshot.key
+            question?.isDeleted = true
+            _question.value = question!!
+        }
+
+        override fun onChildMoved(snapshot: DataSnapshot, previousChildName: String?) {}
+
+        override fun onCancelled(error: DatabaseError) {}
+    }
+
+    fun getRealtimeUpdate () {
+        qDatabase.addChildEventListener(childEventListener)
+    }
 
     fun fetchQuestions() {
         qDatabase.addListenerForSingleValueEvent(object : ValueEventListener {
@@ -80,38 +111,8 @@ class QuestionsViewModel : ViewModel() {
         })
     }
 
-}
-
-    /**
-     * Maybe we want to do this logic internally instead of a call to the database? Will have to look up if this is a database call each time.
-     * Function that returns a list of questions with the passed category value from the database
-     * @category: <String> name of category to get questions from.
-     * Return: List of Question objects from the database on success, empty list on failure.
-     */
-
-
-/** Saved for later use
-var question = Question(id = id)
-try {
-    val questionListner =  object : ValueEventListener {
-        override fun onDataChange(dataSnapshot: DataSnapshot) {
-            question.format = dataSnapshot.child("format").value.toString()
-            question.category = dataSnapshot.child("category").value.toString()
-            question.prompt = dataSnapshot.child("prompt").value.toString()
-            val answers = mutableListOf<String>()
-            for (each in dataSnapshot.child("answers").children) {
-                answers.add(each.toString())
-            }
-            question.picture = dataSnapshot.child("picture").value.toString()
-        }
-
-        override fun onCancelled(databaseError: DatabaseError) {
-        }
+    override fun onCleared() {
+        super.onCleared()
+        qDatabase.removeEventListener(childEventListener)
     }
-    ref.child(id).addValueEventListener(questionListner)
-
-} catch (e: Exception) {
-    return null
 }
-return question
-        */

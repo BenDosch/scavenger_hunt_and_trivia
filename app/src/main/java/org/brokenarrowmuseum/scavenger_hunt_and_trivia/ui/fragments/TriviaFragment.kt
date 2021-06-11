@@ -32,8 +32,14 @@ class TriviaFragment : Fragment() {
         super.onViewCreated(itemView, savedInstanceState)
 
         viewModel.fetchQuestions()
+        viewModel.getRealtimeUpdate()
+
         viewModel.questions.observe(viewLifecycleOwner, {
             adapter.setQuestions(it)
+        })
+
+        viewModel.question.observe(viewLifecycleOwner, Observer {
+            adapter.addQuestion(it)
         })
 
         val rvTriva = view?.findViewById<RecyclerView>(R.id.rvTrivia)

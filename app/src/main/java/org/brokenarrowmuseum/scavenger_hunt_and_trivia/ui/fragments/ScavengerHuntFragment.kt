@@ -25,16 +25,15 @@ class ScavengerHuntFragment : Fragment() {
         super.onViewCreated(itemView, savedInstanceState)
 
         val questionlist = mutableListOf<Question>(
-            Question("1", "Open-ended", "Is this the real life?"),
-            Question("2", "Open-ended", "Is this just fantasy?"),
-            Question("3", "Open-ended", "Caught in a landslide"),
-            Question("4", "Open-ended", "No escape from reality?"),
-            Question("5", "Open-ended", "Open your eyes"),
-            Question("6", "Open-ended", "Look up to the skies"),
-            Question("7", "Open-ended", "and see!"),
+            Question("1", isDeleted = false,"Scavenger Hunt", "Is this the real life?"),
+            Question("2", isDeleted = false,"Scavenger Hunt", "Is this just fantasy?"),
+            Question("3", isDeleted = false,"Scavenger Hunt", "Caught in a landslide"),
+            Question("4", isDeleted = false,"Scavenger Hunt", "No escape from reality?"),
+            Question("5", isDeleted = false,"Scavenger Hunt", "Open your eyes"),
+            Question("6", isDeleted = false,"Scavenger Hunt", "Look up to the skies"),
+            Question("7", isDeleted = false,"Scavenger Hunt", "and see!"),
             Question(
-                "8",
-                "Open-ended",
+                "8", isDeleted = false,"Scavenger Hunt",
                 "I'm just a poor boy, nobody loves me, because it's easy come, easy go. Little high, little low. Anyway the wind blows doesn't even mater to meeeee. Tooooo meeeeeeee."
             )
         )
