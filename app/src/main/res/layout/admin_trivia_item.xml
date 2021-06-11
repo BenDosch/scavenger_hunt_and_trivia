@@ -8,17 +8,34 @@
 
   <TextView
       android:id="@+id/tvPrompt"
-      android:layout_width="wrap_content"
+      android:layout_width="0dp"
       android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
       android:fontFamily="@font/montserrat_regular"
       android:textColor="#FFFFFF"
       android:textSize="34sp"
+      app:layout_constraintEnd_toStartOf="@+id/imbtnEdit"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintVertical_chainStyle="packed"
       tools:text="@tools:sample/lorem" />
 
+  <ImageButton
+      android:id="@+id/imbtnEdit"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toStartOf="@+id/imbtnDelete"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@android:drawable/ic_menu_edit"
+      android:contentDescription="@string/Edit_Question" />
+
+  <ImageButton
+      android:id="@+id/imbtnDelete"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@android:drawable/ic_menu_delete"
+      android:contentDescription="@string/Delete_Question" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

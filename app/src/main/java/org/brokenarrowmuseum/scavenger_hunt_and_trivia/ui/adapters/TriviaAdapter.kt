@@ -18,6 +18,13 @@ class TriviaAdapter() : RecyclerView.Adapter<TriviaAdapter.QuestionViewModel>() 
         notifyDataSetChanged()
     }
 
+    fun addQuestion(question: Question) {
+        if (!questions.contains(question)) {
+            questions.add(question)
+            notifyDataSetChanged()
+        }
+    }
+
     // Create new views (invoked by the layout manager)
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): QuestionViewModel {
         // Create a new view, which defines the UI of the list item
