@@ -13,6 +13,10 @@ import org.brokenarrowmuseum.scavenger_hunt_and_trivia.R
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.adapters.TriviaAdapter
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.viewmodels.QuestionsViewModel
 
+/**
+ * Fragment that holds the recycler view of all the trivia questions to users.
+ */
+
 class TriviaFragment : Fragment() {
 
     private lateinit var viewModel : QuestionsViewModel
@@ -31,14 +35,14 @@ class TriviaFragment : Fragment() {
     override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
         super.onViewCreated(itemView, savedInstanceState)
 
-        viewModel.fetchQuestions()
+        viewModel.fetchTrivia()
         viewModel.getRealtimeUpdate()
 
-        viewModel.questions.observe(viewLifecycleOwner, {
+        viewModel.tQuestions.observe(viewLifecycleOwner, {
             adapter.setQuestions(it)
         })
 
-        viewModel.question.observe(viewLifecycleOwner, Observer {
+        viewModel.tQuestion.observe(viewLifecycleOwner, Observer {
             adapter.addQuestion(it)
         })
 

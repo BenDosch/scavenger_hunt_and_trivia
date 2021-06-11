@@ -14,6 +14,9 @@ import org.brokenarrowmuseum.scavenger_hunt_and_trivia.R
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.Question
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.viewmodels.QuestionsViewModel
 
+/**
+ * Class that sets up the dialog fragment for editing trivia questions in the administrative area.
+ */
 
 class EditTriviaDialogFragment (
     private val question : Question

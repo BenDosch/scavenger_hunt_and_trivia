@@ -10,6 +10,9 @@ import org.brokenarrowmuseum.scavenger_hunt_and_trivia.R
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.Question
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.interfaces.TriviaAdminInterface
 
+/**
+ * Class for the adapter between the fragment and recycler view for the administrative trivia area.
+ */
 
 class AdminTriviaAdapter() : RecyclerView.Adapter<AdminTriviaAdapter.QuestionViewModel>() {
 

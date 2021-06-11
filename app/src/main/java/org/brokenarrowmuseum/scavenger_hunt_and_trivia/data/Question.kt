@@ -13,12 +13,13 @@ data class Question(
     var id: String? = null,
     @get: Exclude
     var isDeleted: Boolean = false,
-    var format: String? = "",
+    var format: String? = "", // Currently implementing Trivia and Scavenger Hunt
     var prompt: String? = "",
-    var answers: MutableList<String>? = null,
-    var category: String? = null,
+    var answers: MutableList<String>? = null, // For later implementation of multipule choice questions
+    var category: String? = null, // For later use in organizing triva questions
     var picture: String? = null // Figure out what type of data later, string for now
 ) {
+    // Needed to prevent duplicates when doing realtime updates
     override fun equals(other: Any?): Boolean {
         return if (other is Question) {
             other.id == id

@@ -16,6 +16,10 @@ import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.interfaces.TriviaAdmin
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.adapters.AdminTriviaAdapter
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.viewmodels.QuestionsViewModel
 
+/**
+ * Fragment class that is set up to hold the recycler view for the trivia administrative activity
+ */
+
 class AdminTriviaFragment : Fragment() , TriviaAdminInterface {
 
     private lateinit var viewModel : QuestionsViewModel
@@ -36,14 +40,13 @@ class AdminTriviaFragment : Fragment() , TriviaAdminInterface {
 
         adapter.listner = this
 
-        viewModel.fetchQuestions()
+        viewModel.fetchTrivia()
         viewModel.getRealtimeUpdate()
 
-        viewModel.questions.observe(viewLifecycleOwner, {
+        viewModel.tQuestions.observe(viewLifecycleOwner, {
             adapter.setQuestions(it)
         })
-
-        viewModel.question.observe(viewLifecycleOwner, Observer {
+        viewModel.tQuestion.observe(viewLifecycleOwner, Observer {
             adapter.addQuestion(it)
         })
 
