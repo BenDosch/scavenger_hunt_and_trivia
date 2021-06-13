@@ -7,6 +7,6 @@ import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.Question
  * Interface to handle button clicks for individual items in the Trivia Administrative Recycler View.
  */
 
-interface TriviaAdminInterface {
-    fun onTriviaRecycerlViewItemClick(view: View, question : Question)
+interface RecyclerViewInterface {
+    fun onRecycerlViewItemClick(view: View, question : Question)
 }

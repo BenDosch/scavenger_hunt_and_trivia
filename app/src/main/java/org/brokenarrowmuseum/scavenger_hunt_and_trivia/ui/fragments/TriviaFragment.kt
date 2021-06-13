@@ -10,14 +10,16 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.R
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.Question
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.adapters.TriviaAdapter
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.interfaces.RecyclerViewInterface
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.viewmodels.QuestionsViewModel
 
 /**
  * Fragment that holds the recycler view of all the trivia questions to users.
  */
 
-class TriviaFragment : Fragment() {
+class TriviaFragment : Fragment(), RecyclerViewInterface {
 
     private lateinit var viewModel : QuestionsViewModel
     private val adapter = TriviaAdapter()
@@ -26,7 +28,7 @@ class TriviaFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Initilaize the viewModel using the fragments view
+        // Initialize the viewModel using the fragments view
         viewModel = ViewModelProvider(this).get(QuestionsViewModel::class.java)
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_trivia, container, false)
@@ -38,7 +40,7 @@ class TriviaFragment : Fragment() {
         viewModel.fetchTrivia()
         viewModel.getRealtimeUpdate()
 
-        viewModel.tQuestions.observe(viewLifecycleOwner, {
+        viewModel.tQuestions.observe(viewLifecycleOwner, Observer {
             adapter.setQuestions(it)
         })
 
@@ -46,8 +48,19 @@ class TriviaFragment : Fragment() {
             adapter.addQuestion(it)
         })
 
-        val rvTriva = view?.findViewById<RecyclerView>(R.id.rvTrivia)
-        rvTriva?.adapter = adapter
-        rvTriva?.layoutManager = LinearLayoutManager(activity)
+        val rvTrivia = view?.findViewById<RecyclerView>(R.id.rvTrivia)
+        rvTrivia?.adapter = adapter
+        rvTrivia?.layoutManager = LinearLayoutManager(activity)
+    }
+
+    override fun onRecycerlViewItemClick(view: View, question: Question) {
+        when (view.id) {
+            R.id.tvPrompt -> {
+                AnswerTriviaDialogFragment(question).show(childFragmentManager, "")
+            }
+            R.id.tvResponse -> {
+                AnswerTriviaDialogFragment(question).show(childFragmentManager, "")
+            }
+        }
     }
 }

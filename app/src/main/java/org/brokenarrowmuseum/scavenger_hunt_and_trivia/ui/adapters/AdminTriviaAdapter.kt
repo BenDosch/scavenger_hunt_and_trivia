@@ -8,16 +8,16 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.R
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.Question
-import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.interfaces.TriviaAdminInterface
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.interfaces.RecyclerViewInterface
 
 /**
  * Class for the adapter between the fragment and recycler view for the administrative trivia area.
  */
 
-class AdminTriviaAdapter() : RecyclerView.Adapter<AdminTriviaAdapter.QuestionViewModel>() {
+class AdminTriviaAdapter : RecyclerView.Adapter<AdminTriviaAdapter.QuestionViewModel>() {
 
     private var questions = mutableListOf<Question>()
-    var listner: TriviaAdminInterface? = null
+    var listener: RecyclerViewInterface? = null
 
     fun setQuestions(questions: List<Question>) {
         this.questions = questions as MutableList<Question>
@@ -50,10 +50,10 @@ class AdminTriviaAdapter() : RecyclerView.Adapter<AdminTriviaAdapter.QuestionVie
     override fun onBindViewHolder(viewHolder: QuestionViewModel, position: Int) {
         viewHolder.tvPrompt.text = questions[position].prompt
         viewHolder.imbtnEdit.setOnClickListener {
-            listner?.onTriviaRecycerlViewItemClick(it, questions[position])
+            listener?.onRecycerlViewItemClick(it, questions[position])
         }
         viewHolder.imbtnDelete.setOnClickListener {
-            listner?.onTriviaRecycerlViewItemClick(it, questions[position])
+            listener?.onRecycerlViewItemClick(it, questions[position])
         }
     }
 

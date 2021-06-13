@@ -7,11 +7,13 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.R
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.Question
+import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.interfaces.RecyclerViewInterface
 
 
-class TriviaAdapter() : RecyclerView.Adapter<TriviaAdapter.QuestionViewModel>() {
+class TriviaAdapter : RecyclerView.Adapter<TriviaAdapter.QuestionViewModel>() {
 
     private var questions = mutableListOf<Question>()
+    private var listener: RecyclerViewInterface? = null
 
     fun setQuestions(questions: List<Question>) {
         this.questions = questions as MutableList<Question>
@@ -36,6 +38,12 @@ class TriviaAdapter() : RecyclerView.Adapter<TriviaAdapter.QuestionViewModel>() 
     // Replace the contents of a view (invoked by the layout manager)
     override fun onBindViewHolder(viewHolder: QuestionViewModel, position: Int) {
         viewHolder.tvPrompt.text = questions[position].prompt
+        viewHolder.tvPrompt.setOnClickListener {
+            listener?.onRecycerlViewItemClick(it, questions[position])
+        }
+        viewHolder.tvResponse.setOnClickListener {
+            listener?.onRecycerlViewItemClick(it, questions[position])
+        }
     }
 
     // Return the size of your dataset (invoked by the layout manager)
@@ -43,10 +51,12 @@ class TriviaAdapter() : RecyclerView.Adapter<TriviaAdapter.QuestionViewModel>() 
 
     inner class QuestionViewModel(view: View) : RecyclerView.ViewHolder(view) {
         val tvPrompt: TextView
+        val tvResponse: TextView
 
         init {
             // Define click listener for the ViewHolder's View.
             tvPrompt = view.findViewById(R.id.tvPrompt)
+            tvResponse = view.findViewById(R.id.tvResponse)
         }
     }
 

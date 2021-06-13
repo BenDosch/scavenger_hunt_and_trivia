@@ -13,10 +13,12 @@ data class Question(
     var id: String? = null,
     @get: Exclude
     var isDeleted: Boolean = false,
+    @get: Exclude
+    var response: String? = "Please answer here",
     var format: String? = "", // Currently implementing Trivia and Scavenger Hunt
     var prompt: String? = "",
-    var answers: MutableList<String>? = null, // For later implementation of multipule choice questions
-    var category: String? = null, // For later use in organizing triva questions
+    var answers: MutableList<String>? = null, // For later implementation of multiple choice questions
+    var category: String? = null, // For later use in organizing trivia questions
     var picture: String? = null // Figure out what type of data later, string for now
 ) {
     // Needed to prevent duplicates when doing realtime updates
