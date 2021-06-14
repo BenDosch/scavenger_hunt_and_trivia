@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
@@ -23,7 +24,8 @@ class AnswerTriviaDialogFragment (
     private lateinit var viewModel: QuestionsViewModel
 
     private val tvResponse = view?.findViewById<TextView>(R.id.tvResponse)
-    private val tvPrompt = view?.findViewById<TextView>(R.id.tvPrompt)
+    private val tvTriviaPrompt = view?.findViewById<TextView>(R.id.tvTriviaPrompt)
+    private val btnAnswerTriviaQuestion = view?.findViewById<Button>(R.id.btnAnswerTriviaQuestion)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,7 +40,7 @@ class AnswerTriviaDialogFragment (
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        tvPrompt?.text = question.prompt
+        tvTriviaPrompt?.text = question.prompt
         tvResponse?.text = question.response
 
         viewModel.result.observe(viewLifecycleOwner, {
@@ -51,17 +53,9 @@ class AnswerTriviaDialogFragment (
             dismiss()
         })
 
-        tvPrompt?.setOnClickListener {
-            val response = tvResponse?.text.toString()
-            if (response.isEmpty()) {
-                return@setOnClickListener
-            }
-            question.response = response
-            viewModel.updateQuestion(question)
-        }
 
-        tvResponse?.setOnClickListener {
-            val response = tvResponse.text.toString()
+        btnAnswerTriviaQuestion?.setOnClickListener {
+            val response = tvResponse?.text.toString()
             if (response.isEmpty()) {
                 return@setOnClickListener
             }

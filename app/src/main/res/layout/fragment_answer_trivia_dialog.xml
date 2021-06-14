@@ -8,18 +8,19 @@
     tools:context=".ui.activities.TriviaAdminActivity">
 
     <TextView
+        android:id="@+id/tvTriviaPrompt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="12dp"
+        android:text="@string/Prompt"
         android:fontFamily="@font/montserrat_regular"
-        android:text="@string/Trivia"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="24sp" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ilCategory"
+        android:id="@+id/ilResponse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp">

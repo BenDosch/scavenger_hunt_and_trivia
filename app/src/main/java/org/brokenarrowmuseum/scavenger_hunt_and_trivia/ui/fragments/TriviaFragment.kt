@@ -37,13 +37,14 @@ class TriviaFragment : Fragment(), RecyclerViewInterface {
     override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
         super.onViewCreated(itemView, savedInstanceState)
 
+        adapter.listener = this
+
         viewModel.fetchTrivia()
         viewModel.getRealtimeUpdate()
 
         viewModel.tQuestions.observe(viewLifecycleOwner, Observer {
             adapter.setQuestions(it)
         })
-
         viewModel.tQuestion.observe(viewLifecycleOwner, Observer {
             adapter.addQuestion(it)
         })
@@ -55,10 +56,7 @@ class TriviaFragment : Fragment(), RecyclerViewInterface {
 
     override fun onRecycerlViewItemClick(view: View, question: Question) {
         when (view.id) {
-            R.id.tvPrompt -> {
-                AnswerTriviaDialogFragment(question).show(childFragmentManager, "")
-            }
-            R.id.tvResponse -> {
+            R.id.btnAnswerTriviaQuestion -> {
                 AnswerTriviaDialogFragment(question).show(childFragmentManager, "")
             }
         }

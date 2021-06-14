@@ -2,11 +2,13 @@ package org.brokenarrowmuseum.scavenger_hunt_and_trivia.data
 
 import com.google.firebase.database.Exclude
 import com.google.firebase.database.IgnoreExtraProperties
+import kotlinx.serialization.Serializable
 
 /**
  * Class representing questions for the scavenger hunt and trivia.
  */
 
+@Serializable
 @IgnoreExtraProperties
 data class Question(
     @get: Exclude

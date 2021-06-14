@@ -3,6 +3,7 @@ package org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.R
@@ -13,7 +14,7 @@ import org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.interfaces.RecyclerVie
 class TriviaAdapter : RecyclerView.Adapter<TriviaAdapter.QuestionViewModel>() {
 
     private var questions = mutableListOf<Question>()
-    private var listener: RecyclerViewInterface? = null
+    var listener: RecyclerViewInterface? = null
 
     fun setQuestions(questions: List<Question>) {
         this.questions = questions as MutableList<Question>
@@ -38,10 +39,8 @@ class TriviaAdapter : RecyclerView.Adapter<TriviaAdapter.QuestionViewModel>() {
     // Replace the contents of a view (invoked by the layout manager)
     override fun onBindViewHolder(viewHolder: QuestionViewModel, position: Int) {
         viewHolder.tvPrompt.text = questions[position].prompt
-        viewHolder.tvPrompt.setOnClickListener {
-            listener?.onRecycerlViewItemClick(it, questions[position])
-        }
-        viewHolder.tvResponse.setOnClickListener {
+        viewHolder.tvResponse.text = questions[position].response
+        viewHolder.btnAnswerTriviaQuestion.setOnClickListener {
             listener?.onRecycerlViewItemClick(it, questions[position])
         }
     }
@@ -52,11 +51,13 @@ class TriviaAdapter : RecyclerView.Adapter<TriviaAdapter.QuestionViewModel>() {
     inner class QuestionViewModel(view: View) : RecyclerView.ViewHolder(view) {
         val tvPrompt: TextView
         val tvResponse: TextView
+        val btnAnswerTriviaQuestion: Button
 
         init {
             // Define click listener for the ViewHolder's View.
             tvPrompt = view.findViewById(R.id.tvPrompt)
             tvResponse = view.findViewById(R.id.tvResponse)
+            btnAnswerTriviaQuestion = view.findViewById(R.id.btnAnswerTriviaQuestion)
         }
     }
 

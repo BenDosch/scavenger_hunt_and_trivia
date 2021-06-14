@@ -8,14 +8,12 @@
 
   <TextView
       android:id="@+id/tvPrompt"
-      android:layout_width="wrap_content"
+      android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:layout_marginTop="8dp"
       android:fontFamily="@font/montserrat_regular"
-      android:textColor="#FFFFFF"
+      android:textColor="@color/teal_700"
       android:textSize="34sp"
-      android:clickable="true"
-      android:focusable="true"
       app:layout_constraintStart_toStartOf="@+id/tvResponse"
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintVertical_chainStyle="packed"
@@ -26,15 +24,21 @@
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:autofillHints="@string/Answer_Here"
-      android:ems="10"
       android:fontFamily="@font/montserrat_regular"
+      android:hint="@string/Answer"
       android:textColor="@color/white"
-      android:hint="@string/Answer_Here"
-      android:clickable="true"
-      android:focusable="true"
+      app:layout_constraintEnd_toStartOf="@+id/btnAnswerTriviaQuestion"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvPrompt" />
+
+  <Button
+      android:id="@+id/btnAnswerTriviaQuestion"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Button"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/tvPrompt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
