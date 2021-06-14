@@ -68,7 +68,7 @@ class AdminTriviaAdapter : RecyclerView.Adapter<AdminTriviaAdapter.QuestionViewM
 
         init {
             // Define click listener for the ViewHolder's View.
-            tvPrompt = view.findViewById(R.id.tvPrompt)
+            tvPrompt = view.findViewById(R.id.tvPromptAdmin)
             imbtnEdit = view.findViewById(R.id.imbtnEdit)
             imbtnDelete = view.findViewById(R.id.imbtnDelete)
         }

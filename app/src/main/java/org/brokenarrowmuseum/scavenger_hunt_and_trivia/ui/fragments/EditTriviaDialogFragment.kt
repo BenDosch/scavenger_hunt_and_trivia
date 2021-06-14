@@ -62,6 +62,4 @@ class EditTriviaDialogFragment (
             viewModel.updateQuestion(question)
         }
     }
-
-
 }

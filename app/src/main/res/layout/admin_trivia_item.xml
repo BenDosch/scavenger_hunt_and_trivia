@@ -7,7 +7,7 @@
     android:layout_height="wrap_content">
 
   <TextView
-      android:id="@+id/tvPrompt"
+      android:id="@+id/tvPromptAdmin"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:fontFamily="@font/montserrat_regular"

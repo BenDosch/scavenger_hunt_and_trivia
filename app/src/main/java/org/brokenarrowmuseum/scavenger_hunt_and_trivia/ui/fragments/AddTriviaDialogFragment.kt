@@ -8,7 +8,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.R
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.data.Question
@@ -53,6 +52,4 @@ class AddTriviaDialogFragment : DialogFragment() {
             viewModel.addQuestion(question)
         }
     }
-
-
 }
