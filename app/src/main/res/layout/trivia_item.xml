@@ -17,7 +17,7 @@
       app:layout_constraintStart_toStartOf="@+id/tvResponse"
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintVertical_chainStyle="packed"
-      tools:text="@tools:sample/lorem" />
+      />
 
   <TextView
       android:id="@+id/tvResponse"
