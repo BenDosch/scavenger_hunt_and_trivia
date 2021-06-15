@@ -45,7 +45,7 @@ class AddTriviaDialogFragment : DialogFragment() {
         addTrivia.setOnClickListener {
             val prompt = view.findViewById<EditText>(R.id.etPrompt).text.toString()
             val category = view.findViewById<EditText>(R.id.etCategory).text.toString()
-            if (prompt.isEmpty() or  category.isEmpty()) {
+            if (prompt.isEmpty() or category.isEmpty()) {
                 return@setOnClickListener
             }
             val question = Question(prompt = prompt, format = "Trivia", category = category)

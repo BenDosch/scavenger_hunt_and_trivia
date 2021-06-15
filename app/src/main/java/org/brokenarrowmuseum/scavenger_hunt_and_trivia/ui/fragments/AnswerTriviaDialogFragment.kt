@@ -36,7 +36,7 @@ class AnswerTriviaDialogFragment (
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<TextView>(R.id.tvTriviaPrompt).setText(question.prompt) // Why are these null?
+        view.findViewById<TextView>(R.id.tvTriviaPrompt).setText(question.prompt)
         view.findViewById<EditText>(R.id.etResponse).setText(question.response)
 
         viewModel.result.observe(viewLifecycleOwner, {

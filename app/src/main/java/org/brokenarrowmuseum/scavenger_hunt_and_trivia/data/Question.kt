@@ -16,7 +16,7 @@ data class Question(
     @get: Exclude
     var isDeleted: Boolean = false,
     @get: Exclude
-    var response: String? = "Please answer here",
+    var response: String? = "",
     var format: String? = "", // Currently implementing Trivia and Scavenger Hunt
     var prompt: String? = "",
     var answers: MutableList<String>? = null, // For later implementation of multiple choice questions
@@ -41,6 +41,4 @@ data class Question(
         result = 31 * result + (picture?.hashCode() ?: 0)
         return result
     }
-
-
 }
