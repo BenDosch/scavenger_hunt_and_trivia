@@ -25,7 +25,7 @@
       android:layout_height="wrap_content"
       android:autofillHints="@string/Answer_Here"
       android:fontFamily="@font/montserrat_regular"
-      android:hint="@string/Answer"
+      android:hint="@string/Answer_Goes_Here"
       android:textColor="@color/white"
       app:layout_constraintEnd_toStartOf="@+id/btnAnswerTriviaQuestion"
       app:layout_constraintHorizontal_bias="0.0"

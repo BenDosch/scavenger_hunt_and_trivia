@@ -29,4 +29,5 @@
     <string name="Yes">Yes</string>
     <string name="Answer">Answer</string>
     <string name="Question_Answered">Question Answered Successfully</string>
+    <string name="Answer_Goes_Here">You have not yet answered this question. Please click the \"Answer\" button to do so.</string>
 </resources>
