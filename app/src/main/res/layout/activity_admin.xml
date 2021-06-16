@@ -25,6 +25,7 @@
         android:fontFamily="@font/montserrat_regular"
         android:text="@string/Pick_A_Format"
         android:textColor="#FFFFFF"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
