@@ -3,6 +3,7 @@ package org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.activities
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import org.brokenarrowmuseum.scavenger_hunt_and_trivia.R
 
@@ -17,12 +18,15 @@ class AdminActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        /**
+
         val scavengerHuntAdmin = findViewById<Button>(R.id.btnScavengerHuntAdmin)
         scavengerHuntAdmin.setOnClickListener {
-            val intent = Intent(this, ScavengerHuntAdminActivity::class.java)
-            startActivity(intent)
+            val text = "Brush"
+            val duration = Toast.LENGTH_SHORT
+
+            val toast = Toast.makeText(applicationContext, text, duration)
+            toast.show()
         }
-        */
+
     }
 }

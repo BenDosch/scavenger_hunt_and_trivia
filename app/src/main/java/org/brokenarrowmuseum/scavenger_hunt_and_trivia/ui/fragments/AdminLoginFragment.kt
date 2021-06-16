@@ -33,6 +33,7 @@ class AdminLoginFragment : Fragment() {
             val entry = view.findViewById<EditText>(R.id.editTextTextPassword).text.toString()
 
             if ( entry.compareTo(getString(R.string.parse_application_id)) == 0 ) {
+                view.findViewById<EditText>(R.id.editTextTextPassword).text.clear()
                 val intent = Intent(activity, AdminActivity::class.java)
                 startActivity(intent)
             } else {
