@@ -1,0 +1,23 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Header Header Header"
+      "About About About"
+      "Features Features Features"
+      "More More More"
+      "Contact Contact Contact";
+  }
+  
+  .header { grid-area: header; }
+  
+  .About { grid-area: About; }
+  
+  .Features { grid-area: Features; }
+  
+  .More { grid-area: More; }
+
+  .Contact { grid-area: Contact; }
