@@ -13,11 +13,11 @@
       android:layout_marginTop="8dp"
       android:fontFamily="@font/montserrat_regular"
       android:textColor="@color/white"
+      android:textColorHint="#DE9537"
       android:textSize="30sp"
       app:layout_constraintStart_toStartOf="@+id/tvResponse"
       app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_chainStyle="packed"
-      />
+      app:layout_constraintVertical_chainStyle="packed" />
 
   <TextView
       android:id="@+id/tvResponse"
@@ -27,6 +27,7 @@
       android:fontFamily="@font/montserrat_regular"
       android:hint="@string/Answer_Goes_Here"
       android:textColor="@color/white"
+      android:textColorHint="#DE9537"
       app:layout_constraintEnd_toStartOf="@+id/btnAnswerTriviaQuestion"
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
