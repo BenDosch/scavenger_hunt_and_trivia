@@ -1,3 +1,7 @@
+body {
+  font-family: monsterrat, Arial, Helvetica, sans-serif;
+}
+
 ul {
   position: fixed;
   top: 0;
@@ -31,7 +35,7 @@ li a:hover {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 0px 0px;
-    grid-auto-flow: row;
+    grid-auto-flow: column;
     grid-template-areas:
       "Header Header Header"
       "About About About"
@@ -40,7 +44,7 @@ li a:hover {
       "Contact Contact Contact";
   }
   
-  .header { grid-area: header; }
+  .Header { grid-area: header; }
   
   .About { grid-area: About; }
   
