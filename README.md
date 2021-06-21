@@ -13,7 +13,7 @@ This application was built by:
 ### Installation
 
 ### Usage
-![Trivia Page](https://ibb.co/Qn9NcHd)
+![Trivia Page](/images/trivia.png)
 ### Contributing
 
 ### Related Projects
