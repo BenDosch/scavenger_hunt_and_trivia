@@ -7,4 +7,27 @@
     <string name="Question_Type">Pick a question type to add</string>
     <string name="Scavenger_Hunt">Scavenger Hunt</string>
     <string name="Trivia">Trivia</string>
+    <string name="Author_Addedd">Author successfully added</string>
+    <string name="Error">Error: %1$s</string>
+    <string name="Add_Trivia">Add New Trivia Question</string>
+    <string name="Prompt">Prompt</string>
+    <string name="Category">Category</string>
+    <string name="Add_Btn">Add New Trivia Question</string>
+    <string name="Admin">Edit</string>
+    <string name="Scavenger_Desc">Description</string>
+    <string name="Found">Found</string>
+    <string name="Answer_Here">Answer Here</string>
+    <string name="Please_Enter_Password">Please Enter Password</string>
+    <string name="Password">Password</string>
+    <string name="Submit">Submit</string>
+    <string name="Museum_Logo">Museum Logo</string>
+    <string name="Admin_Instructions">Click on a question to edit or click the button to add a new question.</string>
+    <string name="Pick_A_Format">What type of question would you like to edit?</string>
+    <string name="Edit_Trivia">Edit Triva Question</string>
+    <string name="Trivia_Updated">Trivia Updated</string>
+    <string name="Delete_Confirmation">Are you sure you want to delete this question?</string>
+    <string name="Yes">Yes</string>
+    <string name="Answer">Answer</string>
+    <string name="Question_Answered">Question Answered Successfully</string>
+    <string name="Answer_Goes_Here">You have not yet answered this question. Please click the \"Answer\" button to do so.</string>
 </resources>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#333333"
-    tools:context=".MainActivity">
+    tools:context=".ui.activities.MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -16,17 +16,16 @@
         android:layout_marginTop="3dp"
         android:layout_marginEnd="17dp"
         android:layout_marginRight="17dp"
-        android:layout_marginBottom="648dp"
         android:background="#333333"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/Museum_Logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/themuseumlogo" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
-        android:name="org.brokenarrowmuseum.scavenger_hunt_and_trivia.TriviaFragment"
+        android:id="@+id/fcvMain"
+        android:name="org.brokenarrowmuseum.scavenger_hunt_and_trivia.ui.fragments.TriviaFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/btnEdit"
@@ -40,7 +39,8 @@
         android:id="@+id/btnTrivia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Trivia"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/Trivia"
         app:backgroundTint="#038056"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnScavengerHunt"
@@ -51,7 +51,8 @@
         android:id="@+id/btnScavengerHunt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Scavenger Hunt"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/Scavenger_Hunt"
         app:backgroundTint="#038056"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnEdit"
@@ -64,18 +65,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
         android:layout_marginRight="4dp"
-        android:text="Edit"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/Admin"
         app:backgroundTint="#038056"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnScavengerHunt" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
