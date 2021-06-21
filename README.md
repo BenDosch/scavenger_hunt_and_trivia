@@ -6,10 +6,10 @@
 [Read More](Blog Post Link) about the project here.
 
 This application was built by:
-[Ashley Price](https://www.linkedin.com/in/ashleybordenprice/) Front End Development
-[Ben Dosch](https://www.linkedin.com/in/benjamin-dosch-872a4731/)
-[Selidex Parnell](https://www.linkedin.com/in/selidex-parnell-6469a613b/)
-[Ryan Devlin](https://www.linkedin.com/in/ryan-devlin-1151b81a9/)
+*[Ashley Price](https://www.linkedin.com/in/ashleybordenprice/) Front End Development
+*[Ben Dosch](https://www.linkedin.com/in/benjamin-dosch-872a4731/)
+*[Selidex Parnell](https://www.linkedin.com/in/selidex-parnell-6469a613b/)
+*[Ryan Devlin](https://www.linkedin.com/in/ryan-devlin-1151b81a9/)
 ### Installation
 
 ### Usage
