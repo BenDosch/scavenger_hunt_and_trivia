@@ -1,4 +1,16 @@
-# scavenger_hunt_and_trivia
+## The Hunt for Broken Arrow
+
+# Introduction
+
+# Installation
+
+# Usage
+
+# Contributing
+
+# Related Projects
+
+# Licensing
 
 AUTHORS
   Ashley Price
