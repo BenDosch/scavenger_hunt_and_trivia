@@ -1,16 +1,16 @@
 ## The Hunt for Broken Arrow
 
-# Introduction
+### Introduction
 
-# Installation
+### Installation
 
-# Usage
+### Usage
 
-# Contributing
+### Contributing
 
-# Related Projects
+### Related Projects
 
-# Licensing
+### Licensing
 
 AUTHORS
   Ashley Price
