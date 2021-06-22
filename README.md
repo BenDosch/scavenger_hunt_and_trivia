@@ -41,3 +41,14 @@ AUTHORS
   Selidex Parnell
 
 BUGS
+
+### Not Yet Implemented
+
+# Storage
+Local storage for individual users needs to be configured to populate the recycler views & get updated versions of questions from Firebase Realtime Databse. Firebase Storage needs to be set up to send and recieve pictures to add to the scavenger hunt. An admin interface for uploading local photos to the Firebase Storage for new scavenger hunt questions needs to be built.
+
+# Question Types
+Multipul choice questions with an indication of the correct answer are planed to be implemented at some point. The option to make multipul choice questions where a photo from a selection is selected is an optoin we hope to explore. Trivia questions to be sorted by category (and the category displayed).
+
+# Functionality
+A button to clear out all user answers, to facilitate the reuse of the device by museum patrons. Coverting the buttons on the main activity page into a menu bar. Improve the formating and presentation of the scavengerhunt and associated pictures. Adding the use of the camera so users can take pictures of scavenger hunt items to mark that they have found them.
