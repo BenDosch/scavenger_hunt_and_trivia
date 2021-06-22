@@ -7,14 +7,14 @@
 
 This application was built by:
 * [Ashley Price](https://www.linkedin.com/in/ashleybordenprice/) Front End Development
-* [Ben Dosch](https://www.linkedin.com/in/benjamin-dosch-872a4731/)
+* [Ben Dosch](https://www.linkedin.com/in/benjamin-dosch-872a4731/) Full Stack Developer
 * [Selidex Parnell](https://www.linkedin.com/in/selidex-parnell-6469a613b/)
 * [Ryan Devlin](https://www.linkedin.com/in/ryan-devlin-1151b81a9/)
 ### Installation
 
 ### Usage
 ![Trivia Page](/images/trivia.png)
-Users can enter answers to questions using a text box, and store their answers. This data is not saved permanently, and only intended to be stored during the user's visit to the museum.
+Users can enter answers to questions by clicking the answer button, and then typing in their answer. This data will be saved locally to app specific files to record each users answers. Local storage is currently in the process of being implemented, answer data is saved but does not appear in the trivia.
 
 ![Admin](/images/adminlogin.png)
 For security purposes, the admin features are placed behind a password. When the correct password is entered, the user is then able to access the admin panel.
