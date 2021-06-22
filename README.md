@@ -8,7 +8,7 @@
 This application was built by:
 * [Ashley Price](https://www.linkedin.com/in/ashleybordenprice/) Front End Development
 * [Ben Dosch](https://www.linkedin.com/in/benjamin-dosch-872a4731/) Full Stack Developer
-* [Selidex Parnell](https://www.linkedin.com/in/selidex-parnell-6469a613b/)
+* [Selidex Parnell](https://www.linkedin.com/in/selidex-parnell-6469a613b/) Research & Development
 * [Ryan Devlin](https://www.linkedin.com/in/ryan-devlin-1151b81a9/)
 ### Installation
 
