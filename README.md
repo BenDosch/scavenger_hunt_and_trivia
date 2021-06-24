@@ -28,6 +28,9 @@ In later versions, the application will also have a scavenger hunt. On this scre
 ![Edit Trivia](/images/edittrivia.png)
 Here the user is able to add, delete, or modify trivia questions. Changes made update in real time for all devices currently using the application.
 
+### Instalation
+To install the project into an android device you will need an android device runing android 8.0 or later, a computer running android studio, and a way to connect the two via a USB cable. First set the android device into developer mode, and enable USB dbeuging. Next select the device from the device manager in android studio and "Run" the program. It should automaticly install then start the application on the device. 
+
 ### Contributing
 
 ### Related Projects
