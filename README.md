@@ -3,7 +3,7 @@
 ### Introduction
 [The Hunt for Broken Arrow](https://bendoschgit.github.io/scavenger_hunt_and_trivia/) was designed for The Museum Broken Arrow to be used in place of worksheets that they currently provide to guests. This application is currently designed for use on Android devices. Users are able to answer questions about exhibits at the museum through a free form text box, and Administrators are able to update, remove, and add questions through the administrative panel. 
 
-[Read More](Blog Post Link) about the project here.
+[Read More](https://blanketmanatee.medium.com/the-hunt-for-broken-arrow-f4dbbd22b00b) about the project here.
 
 This application was built by:
 * [Ashley Price](https://www.linkedin.com/in/ashleybordenprice/) Front End Development
@@ -34,21 +34,13 @@ Here the user is able to add, delete, or modify trivia questions. Changes made u
 
 ### Licensing
 
-AUTHORS
-  Ashley Price
-  Ben Dosch
-  Ryan Devlin
-  Selidex Parnell
-
-BUGS
-
 ### Not Yet Implemented
 
 #### Storage
-Local storage for individual users needs to be configured to populate the recycler views & get updated versions of questions from Firebase Realtime Databse. Firebase Storage needs to be set up to send and recieve pictures to add to the scavenger hunt. An admin interface for uploading local photos to the Firebase Storage for new scavenger hunt questions needs to be built.
+Local storage for individual users needs to be configured to populate the recycler views & get updated versions of questions from Firebase Realtime Database. Firebase Storage needs to be set up to send and recieve pictures to add to the scavenger hunt. An admin interface for uploading local photos to the Firebase Storage for new scavenger hunt questions needs to be built.
 
 #### Question Types
-Multipul choice questions with an indication of the correct answer are planed to be implemented at some point. The option to make multipul choice questions where a photo from a selection is selected is an optoin we hope to explore. Trivia questions to be sorted by category (and the category displayed).
+Multiple choice questions with an indication of the correct answer are planed to be implemented in future releases. The option to make multiple choice questions where a photo from a selection is selected is an option we hope to explore. Trivia questions to be sorted by category (and the category displayed).
 
 #### Functionality
-A button to clear out all user answers, to facilitate the reuse of the device by museum patrons. Coverting the buttons on the main activity page into a menu bar. Improve the formating and presentation of the scavengerhunt and associated pictures. Adding the use of the camera so users can take pictures of scavenger hunt items to mark that they have found them.
+A button to clear out all user answers, to facilitate the reuse of the device by museum patrons. Converting the buttons on the main activity page into a menu bar. Improve the formating and presentation of the scavengerhunt and associated pictures. Adding the use of the camera so users can take pictures of scavenger hunt items to mark that they have found them.
